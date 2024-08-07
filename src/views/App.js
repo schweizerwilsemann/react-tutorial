@@ -1,9 +1,18 @@
 import logo from './logo.svg';
 import './App.scss';
-// import MyComponent from './Examples/MyComponent';
+import MyComponent from './Examples/MyComponent';
 import ListTodo from './Todos/ListTodo/ListTodo';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Nav from './Navigation/Nav.js';
+import Home from './Examples/Home.js';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+} from 'react-router-dom'
+import AddTodo from './Todos/ListTodo/AddTodo.js';
 
 /**
  * react: 2 components: class components, function components(function, arrow)
@@ -11,16 +20,20 @@ import 'react-toastify/dist/ReactToastify.css';
  */
 function App() {
   // const App = () =>{}
+  
   return (
+    <BrowserRouter>
     <div className="App">
       <header className="App-header">
+        {<Nav />}
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Sim peo to do app
-        </p>
-        
-        {/* <MyComponent></MyComponent> */}
-        <ListTodo />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Todo" element={<ListTodo />} />
+          <Route path="/About" element={<MyComponent />} />
+        </Routes>
+
 
       </header>
       <ToastContainer
@@ -36,6 +49,7 @@ function App() {
         theme="dark"
       />
     </div>
+    </BrowserRouter>
   );
 }
 
