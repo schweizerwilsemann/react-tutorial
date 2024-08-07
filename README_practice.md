@@ -1,0 +1,3 @@
+- Do a to do app (note app) using reactjs.
+- There're 3 main feature: Add, Edit, Delete, 
+- And something awful scss
