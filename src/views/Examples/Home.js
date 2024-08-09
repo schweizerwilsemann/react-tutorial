@@ -1,6 +1,7 @@
 import { cleanup } from "@testing-library/react";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Color from "../HOC/Color";
 
 function Home() {
     const navigate = useNavigate();
@@ -19,5 +20,5 @@ function Home() {
     )
 }
 
-
-export default Home;
+export default Color(Home)
+// export default Home;
