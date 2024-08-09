@@ -1,0 +1,13 @@
+
+button {
+    background-color: azure;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    &:hover {
+        background-color: darkred;
+        color: #fff;
+    }
+}

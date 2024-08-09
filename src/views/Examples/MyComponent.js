@@ -9,9 +9,9 @@ class MyComponent extends React.Component{
 
     state = {
         arrayJobs:[
-            {id: 'adc', title: 'dev lor', salary: '500'},
-            {id: 'adc2', title: 'tester', salary: '200'},
-            {id: 'adc3', title: 'prject manager', salary: '1000'}
+            {id: '1', title: 'dev lor', salary: '500'},
+            {id: '2', title: 'tester', salary: '200'},
+            {id: '3', title: 'prject manager', salary: '1000'}
         ]
     }
    
@@ -19,7 +19,6 @@ class MyComponent extends React.Component{
         this.setState({
             arrayJobs: [...this.state.arrayJobs, job]
         })
-        console.log('check job from parent: ', job)
     }
 
     deleteAJob = (job) => {

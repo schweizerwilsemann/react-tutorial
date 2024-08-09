@@ -1,5 +1,5 @@
 import React from "react";
-
+import MyComponent from "./MyComponent";
 class AddComponent extends React.Component{
     state = {
         title: '',
@@ -49,7 +49,7 @@ class AddComponent extends React.Component{
                         onChange={(event) => this.handleChangeSalary(event)}
                     />
                     <br/><br/>
-                    <input type="submit"
+                    <input type="submit" className="submit"
                         onClick={(event) => this.handleSubmit(event)}
                     />
                 </form> 
